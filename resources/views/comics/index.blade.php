@@ -23,7 +23,7 @@
                 <tr>
                     <th scope="row">{{ $comic->title }}</th>
                     <td>{{ $comic->series }}</td>
-                    <td>{{ $comic->type }}</td>
+                    <td>{{ ucwords($comic->type) }}</td>
                     <td>{{ $comic->price }}</td>
                     <td>{{ substr($comic->description , 0 , 300) . '...' }}</td>
                     <td>
