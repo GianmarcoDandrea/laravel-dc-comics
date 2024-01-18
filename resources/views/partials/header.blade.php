@@ -3,10 +3,10 @@
 
         <a class="navbar-brand" href="">
             <h2>
-                Control Panel
+                Admin Panel
             </h2>
         </a>
-        
+
     </nav>
 
 </header>

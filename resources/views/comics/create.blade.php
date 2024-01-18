@@ -8,7 +8,7 @@
             <div class="col-6 mb-5">
                 <form action="{{ route('comics.store') }}" method="POST">
                     @csrf
-                    
+
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" class="form-control" id="title" name="title">
@@ -21,7 +21,7 @@
 
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="price" name="price">
+                        <input type="number" class="form-control" id="price" name="price">
                     </div>
 
                     <div class="mb-3">
@@ -40,7 +40,7 @@
                             <option selected value="">Select</option>
                             <option value="comic_book">Comic Book</option>
                             <option value="graphic_novel">Graphic Novel</option>
-                          </select>
+                        </select>
                     </div>
 
                     <div class="mb-3">
@@ -49,10 +49,10 @@
                     </div>
 
                     <button class="btn btn-success" type="submit">Save</button>
-                   
+
                 </form>
             </div>
         </div>
-       
+
     </div>
 @endsection
