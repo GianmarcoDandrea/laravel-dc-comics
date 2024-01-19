@@ -39,7 +39,8 @@
                             <a class="btn btn-dark info-btn" href="{{ route('comics.show', ['comic' => $comic->id]) }}">
                                 <i class="fa-solid fa-info"></i>
                             </a>
-                            <a class="btn btn-warning modify-btn" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">
+                            <a class="btn btn-warning modify-btn"
+                                href="{{ route('comics.edit', ['comic' => $comic->id]) }}">
                                 <i class="fa-solid fa-pencil"></i>
                             </a>
 
@@ -53,8 +54,8 @@
                                 </button>
 
                                 {{-- Modal --}}
-                                <div class="modal fade" id="comfimErasing"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="comfimErasing" aria-labelledby="exampleModalLabel"
+                                    aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
