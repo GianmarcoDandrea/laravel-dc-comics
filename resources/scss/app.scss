@@ -9,7 +9,9 @@ img {
 .btn-section {
     width: 10%;
 
-    .btn {
+    .info-btn,
+    .modify-btn,
+    .delete-btn {
         width: 30%;
         aspect-ratio: 1;
     }

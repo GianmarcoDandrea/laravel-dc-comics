@@ -6,3 +6,11 @@ import.meta.glob(["../img/**"]);
 
 // Importiamo parte js di bootstrap css
 import * as bootstrap from 'bootstrap';
+
+
+
+const deleteButton = document.getElementById("delete-btn");
+
+deleteButton.addEventListener("click", function(event){
+    event.preventDefault()
+});

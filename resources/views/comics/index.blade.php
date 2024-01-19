@@ -8,12 +8,12 @@
         </div>
 
         @if (Session::has('message'))
-        <div class="w-100 d-flex justify-content-center">
-            <div class="alert alert-success w-50">
-              {{ Session::get('message') }}
-            </div>
+            <div class="w-100 d-flex justify-content-center">
+                <div class="alert alert-success w-50">
+                    {{ Session::get('message') }}
+                </div>
 
-        </div>
+            </div>
         @endif
 
         <table class="table table-bordered table-hover my-3">
@@ -36,10 +36,10 @@
                         <td>{{ '$' . $comic->price }}</td>
                         <td>{{ substr($comic->description, 0, 300) . '...' }}</td>
                         <td class="btn-section">
-                            <a class="btn btn-dark" href="{{ route('comics.show', ['comic' => $comic->id]) }}">
+                            <a class="btn btn-dark info-btn" href="{{ route('comics.show', ['comic' => $comic->id]) }}">
                                 <i class="fa-solid fa-info"></i>
                             </a>
-                            <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">
+                            <a class="btn btn-warning modify-btn" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">
                                 <i class="fa-solid fa-pencil"></i>
                             </a>
 
@@ -47,9 +47,28 @@
                                 method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-danger w-100" type="submit">
+                                <button id="delete-btn" class="btn btn-danger w-100" data-bs-toggle="modal"
+                                    data-bs-target="#comfimErasing">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
+
+                                {{-- Modal --}}
+                                <div class="modal fade" id="comfimErasing"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Are You Sure To Delete This
+                                                    Item</h5>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                         </td>
                     </tr>
