@@ -1,5 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 
 img {
     max-width: 100%;
+}
+
+.btn-section {
+    width: 10%;
+
+    .btn {
+        width: 30%;
+        aspect-ratio: 1;
+    }
 }
