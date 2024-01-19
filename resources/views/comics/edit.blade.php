@@ -6,7 +6,7 @@
 
         <div class="row justify-content-center mt-5">
             <div class="col-6">
-                <form action="{{ route('comics.update', ['comic' => $comic->id]) }}">
+                <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST">
                     @csrf
                     @method('PUT')
                     
@@ -22,7 +22,7 @@
 
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <input type="number" class="form-control" id="price" name="price" value="{{ $comic->price}}">
+                        <input type="number" step="0.01" class="form-control" id="price" name="price" value="{{ $comic->price}}">
                     </div>
 
                     <div class="mb-3">

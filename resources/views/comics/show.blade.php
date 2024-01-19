@@ -15,7 +15,7 @@
         <ul>
             <li>
                 <strong>Type: </strong>
-                {{ $comic->type }}
+                {{ ucwords($comic->type) }}
             </li>
             <li>
                 <strong>Series: </strong>
@@ -23,7 +23,7 @@
             </li>
             <li>
                 <strong>Price:</strong>
-                {{ $comic->price }}
+                {{ '$' . $comic->price }}
             </li>
             <li>
                 <strong>Sale Date:</strong>
