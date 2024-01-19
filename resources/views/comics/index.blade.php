@@ -7,6 +7,15 @@
             <a class="btn btn-dark" href="{{ route('comics.create') }}">Add new Comics</a>
         </div>
 
+        @if (Session::has('message'))
+        <div class="w-100 d-flex justify-content-center">
+            <div class="alert alert-success w-50">
+              {{ Session::get('message') }}
+            </div>
+
+        </div>
+        @endif
+
         <table class="table table-bordered table-hover my-3">
             <thead class="table-dark">
                 <tr>
@@ -33,6 +42,15 @@
                             <a class="btn btn-warning" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">
                                 <i class="fa-solid fa-pencil"></i>
                             </a>
+
+                            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" class="d-inline-block"
+                                method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger w-100" type="submit">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
