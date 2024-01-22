@@ -3,8 +3,18 @@
 @section('content')
     <div class="container-fluid w-100 p-5">
         <h1>Comics List in Your Database</h1>
-        <div class="text-end">
-            <a class="btn btn-dark" href="{{ route('comics.create') }}">Add new Comics</a>
+        <div class="top-buttons d-flex w-100 justify-content-between">
+            <div class="text-end">
+                <a class="btn btn-warning" href="{{ route('home') }}">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+
+            <div class="text-end">
+                <a class="btn btn-success" href="{{ route('comics.create') }}">
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+            </div>
         </div>
 
         @if (Session::has('message'))
